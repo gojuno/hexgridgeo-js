@@ -1,0 +1,26 @@
+{
+    "name": "hexgridgeo",
+    "version": "1.0.0",
+    "description": "HexGrid Geo",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test"
+    },
+    "repository": {
+      "type": "git",
+        "url": "git+ssh://git@github.com/gojuno/hexgridgeo-js.git"
+    },
+    "author": "Andrew Kirilenko <iced@gojuno.com>",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/gojuno/hexgridgeo-js/issues"
+    },
+    "homepage": "https://github.com/gojuno/hexgridgeo-js#readme",
+    "dependencies": {
+        "morton": "^1.*",
+        "hexgrid": "^1.*"
+    },
+    "devDependencies": {
+        "tape": "^4.*"
+    }
+}

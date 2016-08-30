@@ -1,0 +1,16 @@
+* HexGrid GEO
+** Basics
+GEO wrapper for [[https://github.com/gojuno/hexgrid-js][HexGrid]].
+** Examples
+#+BEGIN_SRC js
+var hexgridgeo = require(hexgridgeo);
+var PointGeo = hexgridgeo.PointGeo;
+
+var grid = new hexgridgeo.HexGridGeo(hexgridgeo.Orientation.FLAT, 500, hexgridgeo.ProjectionSM);
+var hex = grid.hexAt(new PointGeo(-73.5, 40.3));
+var code = grid.hexToCode(hex);
+var restoredHex = grid.hexFromCode(code);
+var neighbors = grid.hexNeighbors(hex, 2);
+var region = grid.createRegion([new PointGeo(-73.0, 40.0), new PointGeo(-74.0, 40.0), new PointGeo(-74.0, 41.0), new PointGeo(-73.0, 41.0)]);
+var hexesInRegion = region.getHexes();
+#+END_SRC
