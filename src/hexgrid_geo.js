@@ -38,7 +38,7 @@ HexGridGeo.prototype.hexNeighbors = function (hex, layers) {
 HexGridGeo.prototype.createRegion = function (geometry) {
   var points = [];
   for (var i = 0; i < geometry.length; i++) {
-    points.push(this.geoToPoint(geometry[i]));
+    points.push(this.projection.geoToPoint(geometry[i]));
   }
   return this.hexGrid.createRegion(points);
 }
