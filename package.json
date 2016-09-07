@@ -1,26 +1,37 @@
 {
-    "name": "hexgridgeo",
-    "version": "1.0.0",
-    "description": "HexGrid Geo",
-    "main": "index.js",
-    "scripts": {
-        "test": "node test"
-    },
-    "repository": {
-      "type": "git",
-        "url": "git+ssh://git@github.com/gojuno/hexgridgeo-js.git"
-    },
-    "author": "Andrew Kirilenko <iced@gojuno.com>",
-    "license": "BSD-3-Clause",
-    "bugs": {
-        "url": "https://github.com/gojuno/hexgridgeo-js/issues"
-    },
-    "homepage": "https://github.com/gojuno/hexgridgeo-js#readme",
-    "dependencies": {
-        "morton": "^1.*",
-        "hexgrid": "^1.*"
-    },
-    "devDependencies": {
-        "tape": "^4.*"
-    }
+  "name": "hexgrid-geo",
+  "version": "1.0.0",
+  "description": "HexGrid Geo",
+  "keywords": [
+    "grid",
+    "hexagon",
+    "hex",
+    "hexgrid",
+    "geo"
+  ],
+  "author": "Andrew Kirilenko <iced@gojuno.com>",
+  "license": "BSD-3-Clause",
+  "bugs": "https://github.com/gojuno/hexgridgeo-js/issues",
+  "homepage": "https://github.com/gojuno/hexgridgeo-js#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gojuno/hexgridgeo-js.git"
+  },
+  "dependencies": {
+    "morton": "^1.*",
+    "hexgrid-abstract": "^1.*"
+  },
+  "devDependencies": {
+    "tape": "^4.*",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "test": "node test",
+    "build.output": "./node_modules/webpack/bin/webpack.js ./src/hexgrid_geo.js ./package/dist/hexgrid-geo.js",
+    "build.min": "./node_modules/webpack/bin/webpack.js ./src/hexgrid_geo.js ./package/dist/hexgrid-geo.min.js --optimize-minimize",
+    "build": "node test & make copy & npm run build.output & npm run build.min",
+    "publish": "npm publish package",
+    "clean": "rm -rf package"
+  }
 }

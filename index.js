@@ -1,11 +1,11 @@
-var hexgrid = require("hexgrid");
+var hexgrid = require("hexgrid-abstract");
 
 module.exports = {
-  PointGeo: require("./src/point_geo.js"),
-  HexGridGeo: require("./src/hexgrid_geo.js"),
-  ProjectionNoOp: require("./src/projection_noop.js"),
-  ProjectionSin: require("./src/projection_sin.js"),
-  ProjectionAEP: require("./src/projection_aep.js"),
-  ProjectionSM: require("./src/projection_sm.js"),
+  PointGeo: require("./point_geo.js"),
+  HexGridGeo: require("./hexgrid_geo.js"),
+  ProjectionNoOp: require("./projection_noop.js"),
+  ProjectionSin: require("./projection_sin.js"),
+  ProjectionAEP: require("./projection_aep.js"),
+  ProjectionSM: require("./projection_sm.js"),
   Orientation: hexgrid.Orientation
 };
