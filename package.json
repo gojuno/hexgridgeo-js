@@ -1,6 +1,6 @@
 {
   "name": "hexgrid-geo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HexGrid Geo",
   "keywords": [
     "grid",
@@ -19,7 +19,7 @@
     "url": "git+ssh://git@github.com/gojuno/hexgridgeo-js.git"
   },
   "dependencies": {
-    "morton": "^1.*",
+    "morton64": "^1.*",
     "hexgrid-abstract": "^1.*"
   },
   "devDependencies": {
